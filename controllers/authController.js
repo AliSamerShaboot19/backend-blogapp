@@ -44,14 +44,11 @@ const registerUser = asyncHandler(async (req, res) => {
     </div>
   `;
 
-  try {
+  
     await sendemail(user.email, "Verify your email", htmlTemplate);
-  } catch (emailError) {
-    await User.findByIdAndDelete(user._id);
-    await Verification.findByIdAndDelete(verificationToken._id);
-    return res.status(500).json({
+     res.status(200).json({
       message:
-        "Email sending failed. Registration cancelled. Please try again later.",
+        "Email send successfully. Please verify your email.",
     });
   }
 
