@@ -115,7 +115,7 @@ function validateEmail(user) {
 
 function validateNewPassword(user) {
   const schema = joi.object({
-    password: passwordCompexity().required(),
+    password: joi.string().min(6).required(),
   });
   return schema.validate(user);
 }
