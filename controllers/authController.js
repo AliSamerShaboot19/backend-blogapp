@@ -36,7 +36,7 @@ const registerUser = asyncHandler(async (req, res) => {
   });
   await verificationToken.save();
 
-  const link = `${apiUrl}/api/auth/${user._id}/verify/${verificationToken.token}`;
+  const link = `https://blogappcl.netlify.app/api/auth/${user._id}/verify/${verificationToken.token}`;
   const htmlTemplate = `
     <div>
       <p>click on the link below to verify your email</p>
