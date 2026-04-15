@@ -45,12 +45,7 @@ const registerUser = asyncHandler(async (req, res) => {
   `;
 
   
-    await sendemail(user.email, "Verify your email", htmlTemplate);
-     res.status(200).json({
-      message:
-        "Email send successfully. Please verify your email.",
-    });
-  }
+  await sendemail(user.email, "Verify your email", htmlTemplate);
 
   res.status(201).json({
     _id: user._id,
