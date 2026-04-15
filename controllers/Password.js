@@ -30,7 +30,7 @@ const sendResetpasswordLink = asyncHandler(async (req, res) => {
   }
   await verificationToken.save();
 
-  const link = `${baseUrl}/reset-password/${user._id}/${verificationToken.token}`;
+  const link = `https://blogappcl.netlify.app/reset-password/${user._id}/${verificationToken.token}`;
   const htmlTemplate = `<a href="${link}">Click here to reset your password</a>`;
 
   try {
