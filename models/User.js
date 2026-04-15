@@ -79,7 +79,7 @@ function validateUser(user) {
   const schema = joi.object({
     username: joi.string().min(3).max(100).required(),
     email: joi.string().min(5).max(100).required().email(),
-    password: passwordCompexity().required(),
+    password: joi.string().min(6).required(),
   });
   return schema.validate(user);
 }
@@ -96,7 +96,7 @@ function validateUpdate(user) {
   const schema = joi.object({
     username: joi.string().min(3).max(100),
     email: joi.string().min(5).max(100).email(),
-    password: passwordCompexity(),
+    password: joi.string().min(6),
     bio: joi.string().max(500),
   });
   return schema.validate(user);
