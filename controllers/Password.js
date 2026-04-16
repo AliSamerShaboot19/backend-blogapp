@@ -30,7 +30,7 @@ const sendResetpasswordLink = asyncHandler(async (req, res) => {
   }
   await verificationToken.save();
 
-  const link = `https://frontend-blogapp-cqlb.vercel.app/reset-password/${user._id}/${verificationToken.token}`;
+  const link = `https://frontend-blogapp-d1bi.vercel.app/reset-password/${user._id}/${verificationToken.token}`;
   const htmlTemplate = `<a href="${link}">Click here to reset your password</a>`;
 
   try {
