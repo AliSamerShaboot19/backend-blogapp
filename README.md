@@ -28,7 +28,7 @@ A modern and secure blog backend built with Node.js, Express, and MongoDB. This 
 - Multer
 - Cloudinary-ready image handling
 - Nodemailer
-- CORS, Helmet, Express Rate Limit, HPP, XSS Clean
+- CORS
 
 ## Project Structure
 
@@ -195,33 +195,11 @@ This project includes several security practices:
 - Request validation with Joi
 - Role-based authorization
 - CORS enabled
-- Helmet for HTTP header hardening
-- Rate limiting
-- XSS protection
-- Parameter pollution prevention
 
-## Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Commit your work
-5. Open a pull request
-
-## License
-
-This project is licensed under the ISC License.
 
 ## Author
 
 Ali Samer Shaboot
-
----
-
-If you want, I can also generate:
-- a more premium GitHub-style README with badges
-- a shorter version for quick project presentation
+sentation
 - a README in Arabic or English
 - a version tailored for a portfolio or hackathon submission
