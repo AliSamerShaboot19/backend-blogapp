@@ -200,4 +200,4 @@ This project includes several security practices:
 ## Author
 
 Ali Samer Shaboot
-or a portfolio or hackathon submission
+
