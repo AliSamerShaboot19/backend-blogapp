@@ -200,6 +200,4 @@ This project includes several security practices:
 ## Author
 
 Ali Samer Shaboot
-sentation
-- a README in Arabic or English
-- a version tailored for a portfolio or hackathon submission
+or a portfolio or hackathon submission
