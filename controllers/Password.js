@@ -34,7 +34,7 @@ const sendResetpasswordLink = asyncHandler(async (req, res) => {
   const htmlTemplate = `<a href="${link}">Click here to reset your password</a>`;
 
   try {
-    await sendemail(user.email, "Reset Password", htmlTemplate);
+     sendemail(user.email, "Reset Password", htmlTemplate);
   } catch (emailError) {
     return res.status(500).json({
       message: "Failed to send reset password email. Please try again later.",
