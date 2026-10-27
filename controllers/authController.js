@@ -45,7 +45,7 @@ const registerUser = asyncHandler(async (req, res) => {
   `;
 
   
-  await sendemail(user.email, "Verify your email", htmlTemplate);
+   sendemail(user.email, "Verify your email", htmlTemplate);
 
   res.status(201).json({
     _id: user._id,
