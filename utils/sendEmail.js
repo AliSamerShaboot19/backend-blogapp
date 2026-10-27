@@ -22,7 +22,7 @@ module.exports = async (userEmail, subject, htmltemplate) => {
   };
 
   try {
-    const info =  transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
     return info;
   } catch (error) {
     console.error("Nodemailer error:", error);
