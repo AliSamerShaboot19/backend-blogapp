@@ -3,8 +3,8 @@ const nodemailer = require("nodemailer");
 module.exports = async (userEmail, subject, htmltemplate) => {
   const transporter = nodemailer.createTransport({
     host:'smtp.gmail.com',
-    port:587,
-    secure:false,
+    port:465,
+    secure:true,
     auth: {
       user: process.env.APP_EMAIL_ADDRESS,
       pass: process.env.APP_EMAIL_PASSWORD,
@@ -12,7 +12,7 @@ module.exports = async (userEmail, subject, htmltemplate) => {
     connectionTimeout:10000
   });
 
-  transporter.options.dns={family:4}
+ 
 
   const mailOptions = {
     from: process.env.APP_EMAIL_ADDRESS,
