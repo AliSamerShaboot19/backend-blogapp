@@ -9,7 +9,10 @@ module.exports = async (userEmail, subject, htmltemplate) => {
       user: process.env.APP_EMAIL_ADDRESS,
       pass: process.env.APP_EMAIL_PASSWORD,
     },
+    connectionTimeout:10000
   });
+
+  transporter.options.dns={family:4}
 
   const mailOptions = {
     from: process.env.APP_EMAIL_ADDRESS,
